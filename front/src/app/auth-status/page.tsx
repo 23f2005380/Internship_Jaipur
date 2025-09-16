@@ -59,7 +59,7 @@ export default function AuthStatus() {
     return (
       <div className="min-h-screen flex items-center justify-center auth-bg">
         <div className="max-w-3xl w-full">
-          <div className="panel bright text-center">
+          <div className="panel bright on-auth-bg text-center">
             <h2 className="text-2xl font-bold">Multiple devices detected</h2>
             <p className="mt-2 opacity-80">Your account is currently active on {count} devices.</p>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">

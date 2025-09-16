@@ -14,10 +14,10 @@ export default function AuthPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6 auth-bg">
-      <div className="max-w-md w-full animate-rise">
-        <div className="panel bright text-center">
-          <div className="logo-badge mx-auto mb-4">A</div>
-          <h2 className="text-2xl font-bold mb-2">Sign in</h2>
+  <div className="max-w-md w-full animate-rise ">
+  <div className="panel  text-center bg-[#155e5e]">
+        
+          <h2 className="text-2xl font-bold mb-2 text--500">Sign in</h2>
           <p className="text-sm opacity-80 mb-4">Continue with your Auth0 provider</p>
           <div>
             <button type="button" className="btn-auth0" onClick={goAuth0}>Sign in with Auth0</button>

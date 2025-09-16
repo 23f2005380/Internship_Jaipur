@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f7fb; /* off-white neutral background for contrast */
+  --foreground: #0f1724; /* stronger dark text for readability */
 }
 
 @theme inline {
@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #08090a;
+    --foreground: #e6eef6;
   }
 }
 
@@ -45,13 +45,17 @@ button { cursor: pointer; }
 
 /* Color tokens used in components */
 :root {
-  --bg-card: rgba(255,255,255,0.9);
-  --bg-card-dark: rgba(0,0,0,0.6);
+  --bg-card: #ffffff; /* card background in light mode */
+  --bg-card-alpha: rgba(255,255,255,0.9);
+  --bg-card-dark: rgba(2,6,23,0.6);
   --accent: #0f172a;
+  --muted: #6b7280;
 }
 
-.bg-foreground { background: var(--accent); }
-.text-background { color: white; }
+/* helper for dark accent backgrounds */
+.bg-foreground { background: var(--accent); color: white }
+/* renamed: use when you have text on an accent/dark background */
+.text-on-accent { color: white; }
 
 /* Moving animated background */
 .auth-bg {
@@ -74,7 +78,14 @@ button { cursor: pointer; }
   backdrop-filter: blur(6px);
 }
 .panel.bright {
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.75));
+  background: var(--bg-card);
+  border: 1px solid rgba(15,23,42,0.06);
+  color: var(--foreground);
+}
+
+/* ensure panels on top of animated background have enough contrast */
+.panel.on-auth-bg {
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.82));
 }
 
 .input {
